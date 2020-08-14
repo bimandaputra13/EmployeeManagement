@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="25">
+  <path data-name="Path 20" d="M0 0h24v24H0z" fill="none"/>
+  <path data-name="Path 21" d="M5.857 2h7.879a1.5 1.5 0 01.969.355l4.764 4.029A1.5 1.5 0 0120 7.529v12.554C20 21.874 19.98 22 18.143 22H5.857C4.02 22 4 21.874 4 20.083V3.917C4 2.126 4.02 2 5.857 2z" fill="#494b74" opacity=".3"/>
+  <path data-name="Rectangle 26" fill="none" d="M4 1h24v24H4z"/>
+  <path data-name="Path 34" d="M17 9q-.5 5-3 5.35s1.5-5.85-.5-8.85a18.632 18.632 0 01-2.355 7.072C10.14 14.38 9 15.6 9 18c0 3.429 3.511 5.2 6.006 5.2S21 22 21 17.8q0-2.59-4-8.8z" fill="#494b74" fill-rule="evenodd"/>
+</svg>

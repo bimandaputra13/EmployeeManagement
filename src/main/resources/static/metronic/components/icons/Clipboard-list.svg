@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+  <path data-name="Rectangle 82" fill="none" d="M0 0h24v24H0z"/>
+  <path data-name="Path 83" d="M8 3v.5A1.5 1.5 0 009.5 5h5A1.5 1.5 0 0016 3.5V3h2a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2z" fill="#494b74" fill-rule="evenodd" opacity=".3"/>
+  <path data-name="Path 84" d="M11 2a1 1 0 012 0h1.5a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-5a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5z" fill="#494b74" fill-rule="evenodd"/>
+  <rect data-name="Rectangle 83" width="7" height="2" rx="1" transform="translate(10 9)" fill="#494b74" opacity=".3"/>
+  <rect data-name="Rectangle 84" width="2" height="2" rx="1" transform="translate(7 9)" fill="#494b74" opacity=".3"/>
+  <rect data-name="Rectangle 85" width="2" height="2" rx="1" transform="translate(7 13)" fill="#494b74" opacity=".3"/>
+  <rect data-name="Rectangle 86" width="7" height="2" rx="1" transform="translate(10 13)" fill="#494b74" opacity=".3"/>
+  <rect data-name="Rectangle 87" width="2" height="2" rx="1" transform="translate(7 17)" fill="#494b74" opacity=".3"/>
+  <rect data-name="Rectangle 88" width="7" height="2" rx="1" transform="translate(10 17)" fill="#494b74" opacity=".3"/>
+</svg>

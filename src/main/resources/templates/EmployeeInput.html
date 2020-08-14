@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <!-- <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content=""> -->
+
+  <title>Web - Employee Management</title>
+
+  <!-- Bootstrap core CSS -->
+  <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Create Data</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" th:href="@{/}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+
+
+<main role="main" class="container">
+
+	<div class="row">
+		<div class="col-sm-8">
+			<form class="form-horizontal" th:object="${employee}"
+				th:action="@{/employee/create}" method="post">
+				<input type="hidden" th:field="*{id}" />
+				<input type="hidden" th:field="*{version}" />
+				
+				<div class="form-group" style="margin-top:20px">
+					<label class="control-label">NIP :</label>
+					<div>
+						<input type="text" class="form-control" th:field="*{nip}" />
+					</div>
+				</div>
+				<div class="form-group" style="margin-top:20px">
+					<label class="control-label">Nama :</label>
+					<div>
+						<input type="text" class="form-control" th:field="*{nama}" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Tanggal Lahir :</label>
+					<div>
+						<input type="date" class="form-control" th:field="*{tglLahir}" />
+					</div>
+				</div>
+				<div class="form-group" style="margin-top:20px">
+					<label class="control-label">Email :</label>
+					<div>
+						<input type="text" class="form-control" th:field="*{email}" />
+					</div>
+				</div>
+				<div class="form-group" style="margin-top:20px">
+					<label class="control-label">Jabatan :</label>
+					<div>
+						<input type="text" class="form-control" th:field="*{jabatan}" />
+					</div>
+				</div>
+				
+				<div class="form-group" style="margin-top:20px">
+					<label class="control-label">Sallary/Gaji :</label>
+					<div>
+						<input type="text" class="form-control" th:field="*{gaji}" />
+					</div>
+				</div>
+				
+			<div class="form-group" style="display: inline-block;">
+					<div>
+						<button type="submit" class="btn btn-primary ">Save</button>
+					</div>
+				</div>
+				
+				<div class="form-group" style="display: inline-block; margin-left:15px;">
+					<a th:href="@{/employee}">
+						<button class="btn btn-light" type="button">Cancel</button>
+					</a>
+				</div>
+
+				
+			</form>
+		</div>
+	</div>
+
+	</main>
+
+	
+	
+
+	
+
+	<!-- Bootstrap core JavaScript -->
+  <script th:src="@{js/jquery.slim.min.js}"></script>
+	<script th:src="@{js/bootstrap.bundle.min.js}"></script>
+
+
+</body>
+
+</html>

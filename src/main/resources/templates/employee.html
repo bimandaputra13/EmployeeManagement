@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="">
+
+<head>
+
+<!-- <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content=""> -->
+
+<title>Web - Employee Management</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" th:href="@{/metronic/assets/plugins/custom/datatables/datatables.bundle.css}" />
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">Data Employee</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a class="nav-link" th:href="@{/}">Home
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Master
+							Data</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">File
+							Upload</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Report</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+
+
+	</nav>
+
+	<!-- Page Content -->
+	<section layout:fragment="custom-content">
+		<div class="class=" kt-container kt-container--fluid kt-grid__itemkt-grid__item--fluid"">
+
+			<div role="main" class="container" style="margin-top:20px">
+			<div style="margin-bottom: 10px">
+				<a th:href="@{/employee/create}">
+					<button type="button" class="btn btn-primary ">Add</button>
+				</a>
+			</div>
+			<!-- <div style="display: inline-block;">
+	  <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>	
+        </div> -->
+
+			<!--<div class="row">
+				<div class="col-md-12">
+
+					&lt;!&ndash;begin: Datatable &ndash;&gt;
+					<table class="table table-bordered table-striped dataTable"
+						id="tblEmployee" width="100%">
+
+					</table>
+					&lt;!&ndash;end: Datatable &ndash;&gt;
+				</div>
+
+			</div>-->
+
+			<div th:if="${not #lists.isEmpty(employee)}">
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<!--<th>ID</th>-->
+					<th>NIP</th>
+					<th>Nama</th>
+					<th>Tanggal Lahir</th>
+					<th>E-mail</th>
+					<th>Jabatan</th>
+					<th>Sallary</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="employees : ${employee}">
+					<!--<td th:text="${employees.id}"></td>-->
+					<td th:text="${employees.nip}"></td>
+					<td th:text="${employees.nama}"></td>
+					<td date-format="dd-MMM-YYYY" th:text="${employees.tglLahir}"></td>
+					<td th:text="${employees.email}"></td>
+					<td th:text="${employees.jabatan}"></td>
+					<td th:text="${employees.gaji}"></td>
+					<td>
+					<a th:href="${'/employee/edit/' + employees.id}" ><span class="glyphicon glyphicon-edit"></span> </a>
+					&nbsp;
+					<a th:href="${'/employee/delete/' + employees.id}" ><span class="glyphicon glyphicon-trash"></span> </a>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+			</div>
+
+
+		<!-- Footer -->
+		<footer class="page-footer font-small cyan darken-3"
+			style="position: absolute; bottom: 0px;">
+
+			<!-- Footer Elements -->
+			<div class="container">
+
+				<!-- Grid row-->
+				<div class="row">
+
+					<!-- Grid column -->
+					<div class="col-md-12 py-5">
+						<div class="mb-5 flex-center">
+
+							<!-- Google +-->
+							<a class="gplus-ic"> <i class="fab fa-google"></i>
+							</a>
+							<!--Linkedin -->
+							<a class="li-ic"> <i class="fab fa-linkedin"></i>
+							</a>
+							<!--Instagram-->
+							<a class="ins-ic"> <i class="fab fa-instagram"></i>
+							</a>
+
+						</div>
+					</div>
+					<!-- Grid column -->
+
+				</div>
+				<!-- Grid row-->
+
+			</div>
+			<!-- Footer Elements -->
+
+			<!-- Copyright -->
+			<div class="footer-copyright">
+				© 2020 Copyright: <span> Sentot Bimanda Putra</span>
+			</div>
+			<!-- Copyright -->
+
+		</footer>
+
+	</section>
+	<!-- Bootstrap core JavaScript -->
+	<section layout:fragment="custom-script">
+	<script th:src="@{js/jquery.slim.min.js}"></script>
+	<script th:src="@{js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{custom_js/Employee.js}" type="text/javascript"></script>
+	<script th:src="@{metronic/assets/js/pages/crud/datatables/advanced/column-visibility.js}" type="text/javascript"></script>
+	</section>
+
+
+</body>
+
+</html>
